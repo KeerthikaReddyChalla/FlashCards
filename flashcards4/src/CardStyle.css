@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif+Tibetan:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+.card-container {
+  display: flex;
+  flex-wrap: nowrap; 
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative; 
+  gap: 20px; 
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.6s; 
+  margin-right:40px;
+  margin-left:40px;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+  
+  
+
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+  background-color:#ffe4e1;
+  
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-front {
+  background-color:#ffe4e1;
+}
+
+.card-back {
+  background-color:#ffe4e1;
+  transform: rotateY(180deg);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+
+.pagination-controls {
+  display: flex;
+  justify-content: space-between; 
+  position: fixed; 
+  bottom: 20px; 
+  width: calc(100% - 40px); 
+  padding: 0 20px;
+}
+
+.pagination-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+body {
+  background-image: url('./flashcards1.jpg');
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+h1{
+  color: white;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
