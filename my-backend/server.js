@@ -59,7 +59,7 @@ app.delete('/cards/:question', (req, res) => {
   });
 });
 
-app.put('/cards/:answer', (req, res) => {
+app.put('/cards/:question', (req, res) => {
   const { question } = req.params;
   const { Question, Answer } = req.body;
   const sql = 'UPDATE cards_db SET Question = ?, Answer = ? WHERE Question = ?';
